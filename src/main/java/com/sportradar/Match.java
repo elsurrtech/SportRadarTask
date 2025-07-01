@@ -3,6 +3,36 @@ package com.sportradar;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ * <p>
+ * The {@code Match} class represents a single football match in the scoreboard.
+ * It encapsulates all the necessary information about an ongoing match,
+ * including the participating teams, their current scores, and the time
+ * when the match was started.
+ * </p>
+ *
+ * <p>
+ * Instances of this class are immutable in terms of team names and start time,
+ * but their scores can be updated via the {@link #updateScore(int, int)} method.
+ * </p>
+ *
+ * <h3>Usage:</h3>
+ * <pre>{@code
+ * // Create a new match
+ * Match match = new Match("Mexico", "Canada");
+ * System.out.println(match); // Output: Mexico 0 - Canada 0
+ *
+ * // Update the score
+ * match.updateScore(1, 0);
+ * System.out.println(match); // Output: Mexico 1 - Canada 0
+ *
+ * // Get total score
+ * int total = match.getTotalScore(); // total will be 1
+ * }</pre>
+ *
+ * @see ScoreBoard
+ * @since 1.0
+ */
 public class Match {
     private final String homeTeam;
     private final String awayTeam;

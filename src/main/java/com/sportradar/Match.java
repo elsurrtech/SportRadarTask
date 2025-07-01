@@ -60,28 +60,6 @@ public class Match {
         this.startTime = startTime; // Use the provided startTime
     }
 
-    // ... (rest of the methods remain the same) ...
-
-    public String getHomeTeam() {
-        return homeTeam;
-    }
-
-    public String getAwayTeam() {
-        return awayTeam;
-    }
-
-    public int getHomeScore() {
-        return homeScore;
-    }
-
-    public int getAwayScore() {
-        return awayScore;
-    }
-
-    public LocalDateTime getStartTime() {
-        return startTime;
-    }
-
     public void updateScore(int newHomeScore, int newAwayScore) {
         if (newHomeScore < 0 || newAwayScore < 0) {
             throw new IllegalArgumentException("Scores cannot be negative.");
@@ -104,7 +82,6 @@ public class Match {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Match match = (Match) o;
-        // Only compare teams for equality, not score or start time for identifying a match in progress
         return Objects.equals(homeTeam.toLowerCase(), match.homeTeam.toLowerCase()) &&
                 Objects.equals(awayTeam.toLowerCase(), match.awayTeam.toLowerCase());
     }
@@ -113,5 +90,25 @@ public class Match {
     public int hashCode() {
         // Hash code based on lowercased team names for consistent equals/hashCode contract
         return Objects.hash(homeTeam.toLowerCase(), awayTeam.toLowerCase());
+    }
+
+    public String getHomeTeam() {
+        return homeTeam;
+    }
+
+    public String getAwayTeam() {
+        return awayTeam;
+    }
+
+    public int getHomeScore() {
+        return homeScore;
+    }
+
+    public int getAwayScore() {
+        return awayScore;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
     }
 }

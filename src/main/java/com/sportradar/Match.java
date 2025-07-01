@@ -31,6 +31,7 @@ import java.util.Objects;
  * }</pre>
  *
  * @see ScoreBoard
+ * @author Deepesh Sengar
  * @since 1.0
  */
 public class Match {

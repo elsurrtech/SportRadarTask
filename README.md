@@ -78,6 +78,20 @@ ScreenShot of all test passes
 
 ---
 
+---
+
+ScreenShot of Scoreboard and Match class Javadoc style on-hover snippets
+
+![Scoreboard Image](docs/ScoreBoard.png) 
+
+![Match Image](docs/Match.png)
+
+ScreenShot of Class Methods Javadoc style on-hover snippets
+
+![Match Image](docs/sample_method.png)
+
+---
+
 This implementation balances **simplicity**, **robustness**, and **best practices**, making it suitable as a lightweight and maintainable Java library.
 
 Note: My Prime Github account is https://github.com/DeepeshSengarIO which I am not able to access right now as I am travelling right now. So this assignment is done through my secondary account. Have given it a lot of effort, read it thoroughly :) 
